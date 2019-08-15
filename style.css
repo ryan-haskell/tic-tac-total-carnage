@@ -1,0 +1,65 @@
+html, body, .app {
+  margin: 0;
+  height: 100%;
+  font-family: monospace;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(90vmin + 6px);
+  height: calc(90vmin + 6px);
+  border: solid 1px #aaa;
+  position: relative;
+}
+
+.game__board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30vmin;
+  position: relative;
+  background: #ccc;
+  justify-content: center;
+  align-items: center;
+  font-size: 24vmin;
+  font-family: monospace;
+  border: solid 1px #aaa;
+}
+
+.game__cell {
+  width: 10vmin;
+  height: 10vmin;
+  font-size: 5vmin;
+  padding: 0;
+  background: white;
+  border: solid 1px #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: inherit;
+}
+
+.game__cell--disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.game__cell:focus {
+  z-index: 2;
+}
+
+.turn {
+  margin-right: 1rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2rem;
+}
